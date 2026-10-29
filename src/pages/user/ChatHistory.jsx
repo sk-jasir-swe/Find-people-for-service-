@@ -1,0 +1,1 @@
+import {Link} from "react-router-dom"; export default function ChatHistory(){return <div className="container page-shell"><h1>Chat history</h1><p>Open a connected professional from your dashboard to continue a local demo conversation.</p><Link to="/explore" className="btn btn-primary">Explore professionals</Link></div>}
