@@ -1,1 +1,3 @@
-export default function BookingSummary(){return null}
+export default function BookingSummary() {
+  return null;
+}

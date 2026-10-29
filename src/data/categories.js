@@ -1,1 +1,8 @@
-export const categories=[{id:'development',name:'Development',icon:'⌘',count:'1.2k+'},{id:'design',name:'Design & Creative',icon:'✳',count:'840+'},{id:'marketing',name:'Marketing',icon:'↗',count:'620+'},{id:'business',name:'Business & Strategy',icon:'◈',count:'430+'},{id:'finance',name:'Finance',icon:'◎',count:'310+'},{id:'writing',name:'Writing & Content',icon:'≋',count:'520+'}];
+export const categories = [
+  { id: 'development', name: 'Development', icon: '⌘', count: '1.2k+' },
+  { id: 'design', name: 'Design & Creative', icon: '✳', count: '840+' },
+  { id: 'marketing', name: 'Marketing', icon: '↗', count: '620+' },
+  { id: 'business', name: 'Business & Strategy', icon: '◈', count: '430+' },
+  { id: 'finance', name: 'Finance', icon: '◎', count: '310+' },
+  { id: 'writing', name: 'Writing & Content', icon: '≋', count: '520+' },
+];

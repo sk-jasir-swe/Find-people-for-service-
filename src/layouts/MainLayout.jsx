@@ -1,1 +1,18 @@
-import {Outlet} from 'react-router-dom';import Navbar from '../components/common/Navbar';import Footer from '../components/common/Footer';import Toast from '../components/common/Toast';import {useApp} from '../context/AuthContext';export default function MainLayout(){const {toast}=useApp();return <><Navbar/><main><Outlet/></main><Footer/><Toast toast={toast}/></>}
+import { Outlet } from 'react-router-dom';
+import Navbar from '../components/common/Navbar';
+import Footer from '../components/common/Footer';
+import Toast from '../components/common/Toast';
+import { useApp } from '../context/AuthContext';
+export default function MainLayout() {
+  const { toast } = useApp();
+  return (
+    <>
+      <Navbar />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+      <Toast toast={toast} />
+    </>
+  );
+}

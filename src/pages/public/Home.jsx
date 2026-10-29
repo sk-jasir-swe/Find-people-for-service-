@@ -1,1 +1,89 @@
-import Hero from '../../components/home/Hero';import HowItWorks from '../../components/home/HowItWorks';import MeetingPreview from '../../components/home/MeetingPreview';import CTASection from '../../components/home/CTASection';import ProfessionalCard from '../../components/common/ProfessionalCard';import {useApp} from '../../context/AuthContext';import {Link} from 'react-router-dom';import {ArrowRight,ArrowUpRight} from 'lucide-react';import {categories} from '../../data/categories';export default function Home(){const {professionals}=useApp();return <><Hero/><section className="section featured-section" id="featured"><div className="container"><div className="section-heading split-heading"><div><span className="eyebrow"><i className="eyebrow-dot"/> PEOPLE WORTH KNOWING</span><h2>Meet your next<br/><span className="gradient-text">great collaborator.</span></h2></div><div className="heading-action"><p>Thoughtful people. Different perspectives. The expertise your next move needs.</p><Link to="/explore" className="text-link">View all professionals <ArrowRight size={15}/></Link></div></div><div className="professional-grid">{professionals.slice(0,4).map(p=><ProfessionalCard person={p} key={p.id}/>)}</div><div className="center-action"><Link to="/explore" className="btn btn-secondary">Explore all professionals <ArrowUpRight size={16}/></Link></div></div></section><section className="category-band"><div className="container"><div className="category-band-head"><div><span className="eyebrow">YOUR PEOPLE ARE HERE</span><h2>Expertise for every <span className="gradient-text">next step.</span></h2></div><Link to="/categories" className="text-link">All categories <ArrowRight size={15}/></Link></div><div className="category-grid">{categories.map(c=><Link to={`/explore?category=${c.id}`} className="category-card" key={c.id}><span className="category-symbol">{c.icon}</span><div><h3>{c.name}</h3><p>{c.count} professionals</p></div><ArrowUpRight size={16} className="category-arrow"/></Link>)}</div></div></section><HowItWorks/><MeetingPreview/><CTASection/></>}
+import Hero from '../../components/home/Hero';
+import HowItWorks from '../../components/home/HowItWorks';
+import MeetingPreview from '../../components/home/MeetingPreview';
+import CTASection from '../../components/home/CTASection';
+import ProfessionalCard from '../../components/common/ProfessionalCard';
+import { useApp } from '../../context/AuthContext';
+import { Link } from 'react-router-dom';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { categories } from '../../data/categories';
+
+export default function Home() {
+  const { professionals } = useApp();
+
+  return (
+    <>
+      <Hero />
+      <section className="section featured-section" id="featured">
+        <div className="container">
+          <div className="section-heading split-heading">
+            <div>
+              <span className="eyebrow">
+                <i className="eyebrow-dot" /> PEOPLE WORTH KNOWING
+              </span>
+              <h2>
+                Meet your next
+                <br />
+                <span className="gradient-text">great collaborator.</span>
+              </h2>
+            </div>
+            <div className="heading-action">
+              <p>
+                Thoughtful people. Different perspectives. The expertise your
+                next move needs.
+              </p>
+              <Link to="/explore" className="text-link">
+                View all professionals <ArrowRight size={15} />
+              </Link>
+            </div>
+          </div>
+          <div className="professional-grid">
+            {professionals.slice(0, 4).map((p) => (
+              <ProfessionalCard person={p} key={p.id} />
+            ))}
+          </div>
+          <div className="center-action">
+            <Link to="/explore" className="btn btn-secondary">
+              Explore all professionals <ArrowUpRight size={16} />
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="category-band">
+        <div className="container">
+          <div className="category-band-head">
+            <div>
+              <span className="eyebrow">YOUR PEOPLE ARE HERE</span>
+              <h2>
+                Expertise for every{' '}
+                <span className="gradient-text">next step.</span>
+              </h2>
+            </div>
+            <Link to="/categories" className="text-link">
+              All categories <ArrowRight size={15} />
+            </Link>
+          </div>
+          <div className="category-grid">
+            {categories.map((c) => (
+              <Link
+                to={`/explore?category=${c.id}`}
+                className="category-card"
+                key={c.id}
+              >
+                <span className="category-symbol">{c.icon}</span>
+                <div>
+                  <h3>{c.name}</h3>
+                  <p>{c.count} professionals</p>
+                </div>
+                <ArrowUpRight size={16} className="category-arrow" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+      <HowItWorks />
+      <MeetingPreview />
+      <CTASection />
+    </>
+  );
+}

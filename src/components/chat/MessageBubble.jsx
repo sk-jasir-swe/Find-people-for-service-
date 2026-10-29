@@ -1,1 +1,3 @@
-export default function MessageBubble(){return null}
+export default function MessageBubble() {
+  return null;
+}

@@ -1,1 +1,3 @@
-export default function ChatSidebar(){return null}
+export default function ChatSidebar() {
+  return null;
+}

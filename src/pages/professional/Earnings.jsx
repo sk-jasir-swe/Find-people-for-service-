@@ -1,1 +1,1 @@
-export {default} from "./ProfessionalDashboard.jsx";
+export { default } from './ProfessionalDashboard.jsx';

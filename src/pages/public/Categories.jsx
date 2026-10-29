@@ -1,1 +1,45 @@
-import {Link} from 'react-router-dom';import {ArrowUpRight} from 'lucide-react';import {categories} from '../../data/categories';import {useApp} from '../../context/AuthContext';export default function Categories(){const {professionals}=useApp();return <div className="container page-shell"><div className="page-heading"><span className="eyebrow">FIND YOUR FIELD</span><h1>Explore by <span className="gradient-text">expertise.</span></h1><p>Start with the kind of help you need. Find people with the right perspective.</p></div><div className="category-page-grid">{categories.map(c=><Link className="category-large-card" to={`/explore?category=${c.id}`} key={c.id}><span className="category-symbol">{c.icon}</span><span className="eyebrow">{c.count} IN THE NETWORK</span><h2>{c.name}</h2><p>Meet specialists, explore their work, and start a meaningful conversation.</p><span className="text-link">Explore category <ArrowUpRight size={15}/></span><small>{professionals.filter(p=>p.category===c.id).length} demo profiles</small></Link>)}</div></div>}
+import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
+import { categories } from '../../data/categories';
+import { useApp } from '../../context/AuthContext';
+export default function Categories() {
+  const { professionals } = useApp();
+  return (
+    <div className="container page-shell">
+      <div className="page-heading">
+        <span className="eyebrow">FIND YOUR FIELD</span>
+        <h1>
+          Explore by <span className="gradient-text">expertise.</span>
+        </h1>
+        <p>
+          Start with the kind of help you need. Find people with the right
+          perspective.
+        </p>
+      </div>
+      <div className="category-page-grid">
+        {categories.map((c) => (
+          <Link
+            className="category-large-card"
+            to={`/explore?category=${c.id}`}
+            key={c.id}
+          >
+            <span className="category-symbol">{c.icon}</span>
+            <span className="eyebrow">{c.count} IN THE NETWORK</span>
+            <h2>{c.name}</h2>
+            <p>
+              Meet specialists, explore their work, and start a meaningful
+              conversation.
+            </p>
+            <span className="text-link">
+              Explore category <ArrowUpRight size={15} />
+            </span>
+            <small>
+              {professionals.filter((p) => p.category === c.id).length} demo
+              profiles
+            </small>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}

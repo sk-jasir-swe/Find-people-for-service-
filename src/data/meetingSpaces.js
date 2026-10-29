@@ -1,1 +1,35 @@
-export const meetingSpaces=[{id:'m1',name:'The Focus Room',area:'Salt Lake, Kolkata',type:'Private meeting room',capacity:'2–4 people',price:499,initials:'FR',tone:'blue',amenities:['Wi-Fi','Whiteboard','Coffee']},{id:'m2',name:'The Studio Table',area:'Park Street, Kolkata',type:'Creative meeting space',capacity:'2–6 people',price:799,initials:'ST',tone:'violet',amenities:['Wi-Fi','Display','Coffee']},{id:'m3',name:'The Boardroom',area:'New Town, Kolkata',type:'Premium meeting room',capacity:'4–8 people',price:1199,initials:'BR',tone:'green',amenities:['Wi-Fi','Screen','Whiteboard']}];
+export const meetingSpaces = [
+  {
+    id: 'm1',
+    name: 'The Focus Room',
+    area: 'Salt Lake, Kolkata',
+    type: 'Private meeting room',
+    capacity: '2–4 people',
+    price: 499,
+    initials: 'FR',
+    tone: 'blue',
+    amenities: ['Wi-Fi', 'Whiteboard', 'Coffee'],
+  },
+  {
+    id: 'm2',
+    name: 'The Studio Table',
+    area: 'Park Street, Kolkata',
+    type: 'Creative meeting space',
+    capacity: '2–6 people',
+    price: 799,
+    initials: 'ST',
+    tone: 'violet',
+    amenities: ['Wi-Fi', 'Display', 'Coffee'],
+  },
+  {
+    id: 'm3',
+    name: 'The Boardroom',
+    area: 'New Town, Kolkata',
+    type: 'Premium meeting room',
+    capacity: '4–8 people',
+    price: 1199,
+    initials: 'BR',
+    tone: 'green',
+    amenities: ['Wi-Fi', 'Screen', 'Whiteboard'],
+  },
+];

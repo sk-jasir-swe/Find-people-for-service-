@@ -1,1 +1,16 @@
-import {useApp} from "../../context/AuthContext"; export default function UserSettings(){const {currentUser,notify}=useApp();return <div className="container page-shell"><h1>Account settings</h1><p>Signed in as {currentUser?.name}</p><button className="btn btn-secondary" onClick={()=>notify("Settings saved for this demo")}>Save settings</button></div>}
+import { useApp } from '../../context/AuthContext';
+export default function UserSettings() {
+  const { currentUser, notify } = useApp();
+  return (
+    <div className="container page-shell">
+      <h1>Account settings</h1>
+      <p>Signed in as {currentUser?.name}</p>
+      <button
+        className="btn btn-secondary"
+        onClick={() => notify('Settings saved for this demo')}
+      >
+        Save settings
+      </button>
+    </div>
+  );
+}

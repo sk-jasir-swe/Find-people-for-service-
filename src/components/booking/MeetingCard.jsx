@@ -1,1 +1,3 @@
-export default function MeetingCard(){return null}
+export default function MeetingCard() {
+  return null;
+}

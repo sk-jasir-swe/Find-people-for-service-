@@ -1,1 +1,3 @@
-export default function FilterSidebar(){return null}
+export default function FilterSidebar() {
+  return null;
+}
